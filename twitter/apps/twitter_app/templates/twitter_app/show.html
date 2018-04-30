@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Page</title>
+    <link rel='stylesheet' href='{% static "twitter_app/css/show_styles.css"%}'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <div id='title'>
+        TWITTER
+      </div>
+      <div id='logo'>
+        <img src='{% static "twitter_app/images/user.jpg"%}'>
+        <a href='/upload'>edit</a>
+      </div>
+      <div id='welcome_user'>
+        {{request.session.first_name}} {{request.session.last_name}}
+      </div>
+      <div id='actions'>
+        <form action='/show_user_inbox/{{request.session.id}}' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>inbox</button>
+        </form>
+        <form action='/logout' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>logout</button>
+        </form>
+        <a href='/show_all'>show all</a>
+      </div>
+      <div id='post_box'>
+        <form action='/post/{{request.session.id}}' method='POST'>
+          {% csrf_token %}
+          <textarea name='post_content' rows='50' cols='50'placeholder="What's on your mind"></textarea><br>
+          <button type='submit'>post</button>
+        </form>
+      </div>
+    </div>      <!-- </div> to wrapper  -->
+    <div id='wall'>
+      <p>wall</p>
+      {% for post in all_posts %}
+        <div id='post_box'>
+          <div id='posted_by'>
+            <a href='/show_user/{{post.posted_by.id}}'>{{ post.posted_by.first_name }} {{ post.posted_by.last_name }}</a>
+          </div>
+          <div id='post'>
+            {{ post.post_content }}<br>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+    <link rel='stylesheet' href='{% static "twitter_app/css/index_styles.css"%}'>
+  </head>
+  <body>
+    <div id='twitter_img'>
+      <img src='{% static "twitter_app/images/twitter.png"%}'>
+    </div>
+    <div id='login'>
+      <h4>Login</h4>
+      <form action='/login' method='POST'>{%csrf_token%}
+        <input type='email' name='email' placeholder="email"><br>
+        <input type='password' name='password' placeholder="password"><br>
+        <button type='submit'>- Log in -</button>
+      </form>
+      {% if messages %}
+        {% for message in messages %}
+          <p id='errors'>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <p id='no_account'>Don't have an account?</p><br>
+      <a href='/register'>register</a>
+    </div>
+  </body>
+</html>

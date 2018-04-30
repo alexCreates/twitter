@@ -1,0 +1,46 @@
+#login {
+  margin-left: 388px;
+  display: inline-block;
+}
+
+#errors {
+  margin-left: 100px;
+}
+
+#no_account {
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+a {
+  margin-left: 50px;
+  margin-top: -20px;
+}
+
+h4 {
+  font-family: sans-serif;
+  margin-left: 35px;
+}
+
+button {
+  background: linear-gradient(to bottom right, #d6efff, #4bbbff);
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+img {
+  height: 120px;
+  margin-left: 400px;
+}
+
+#errors {
+  margin-left: 13px;
+  font-size: 11px;
+  color: red;
+}

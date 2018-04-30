@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show user</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+    <link rel='stylesheet' href='{% static "twitter_app/css/show_user_styles.css"%}'>
+  </head>
+  <body>
+    <div id='user_name'>
+      {{first_name}} {{last_name}}
+    </div>
+    <div id='follow_button'>
+      <a href='/follow/{{user_id}}'>follow</a>
+      <a href='/show_inbox/{{user_id}}'>message</a>
+    </div>
+    <div id='border'></div>
+    <div id='posts'>
+      <h5><i>Posts</i></h5><br>
+      {% for post in all_user_posts %}
+        {{post.post_content}}<br>
+        <div id='created_at'>
+          <i>created at ...</i>{{post.created_at}}<br><br><br>
+        </div>
+      {% endfor %}
+    </div>
+    <div id='follows'>
+      <h5><i>People following {{first_name}} {{last_name}}</i></h5><br>
+      {% for user in all_users_follows %}
+        {{ user.first_name }} {{ user.last_name }}<br>
+      {% endfor %}
+    </div>
+    <div id='dashboard'>
+      <h4> - <i>Admin Dashboard</i> -</h4>
+      <div id='home_button'>
+        <form action='/show' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>- home -</button>
+        </form>
+      </div>
+      <div id='show_all_button'>
+        <form action='/show_all' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>- show_all -</button>
+        </form>
+      </div>
+      <div id='logout_button'>
+        <form action='/' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>- logout -</button>
+        </form>
+      </div>
+      <div id='delete_button'>
+        <form action='/delete_follows' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>- delete_follows -</button>
+        </form>
+      </div>
+      <div id='delete_button2'>
+        <form action='/delete_posts' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>- delete_posts -</button>
+        </form>
+      </div>
+  </body>
+</html>

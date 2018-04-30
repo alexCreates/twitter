@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Inbox</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+  </head>
+  <body>
+    <h5>User Inbox</h5>
+
+      message content - {{i.inbox.message_content}}
+      sent by - {{i.inbox.sender_id}}
+    <form action='/show' method='POST'>
+      {%csrf_token%}
+      <button type='submit'>Home</button>
+    </form>
+  </body>
+</html>

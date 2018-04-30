@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Who im following</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+  </head>
+  <body>
+    <h4>- Who im following -</h4>
+    {% for user in following_users %}
+       {{user.first_name}} {{user.last_name}}<br><br><br>
+    {% endfor %}
+    <form action='/show' method='POST'>
+      {%csrf_token%}
+      <button type='submit'>- home -</button>
+    </form>
+    <form action='/show_all' method='POST'>
+      {%csrf_token%}
+      <button type='submit'>- show_all -</button>
+    </form>
+    <form action='/' method='POST'>
+      {%csrf_token%}
+      <button type='submit'>- index_logout -</button>
+    </form>
+  </body>
+</html>

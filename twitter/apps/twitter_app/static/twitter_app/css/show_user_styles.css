@@ -1,0 +1,121 @@
+img {
+  margin-left: 780px;
+  margin-top: 20px;
+  height: 120px;
+  width: 120px;
+}
+
+#user_name {
+  margin-left: 40px;
+  font-weight: 100;
+  font-weight: 100;
+  font-size: 37px;
+}
+
+textarea {
+  width: 280px;
+  height: 120px;
+}
+
+#posting {
+  position: absolute;
+  margin-left: 420px;
+  margin-top: 0px;
+  height: 90px;
+}
+
+#posting button{
+  margin-left: 185px;
+}
+
+#title {
+  margin-left: 770px;
+  margin-bottom: -20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-indent: 10px;
+}
+
+#welcome_user {
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-left: 780px;
+  margin-top: 0px;
+}
+
+button {
+  display: inline-block;
+}
+
+#show_all_button {
+  margin-left: 150px;
+  margin-top: -73px;
+}
+
+#delete_button {
+  margin-left: 170px;
+  margin-top:  -73px;
+}
+
+#dashboard {
+  border-top: 1px solid grey;
+  margin-left: 500px;
+  display: inline-block;
+}
+
+#all_users {
+  font-size: 12px;
+  margin-left: 720px;
+  border-left: 1px solid grey;
+  padding-left: 20px;
+}
+
+#posts {
+  margin-top: -80px;
+  overflow: scroll;
+  display: inline-block;
+}
+
+#created_at {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+#border {
+  width: 300px;
+  height: 10px;
+  border-bottom: 1px solid lightgrey;
+  margin-left: 74px;
+  margin-top: -22px;
+  display: inline-block;
+}
+
+#follow_button a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 100;
+  color: #689E99;
+  margin-left: 50px;
+  font-variant: small-caps;
+  display: inline-block;
+}
+
+#message_button a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 100;
+  color: #689E99;
+  margin-left: 140px;
+  margin-top: -80px;
+  font-variant: small-caps;
+
+}
+
+#post_box {
+  margin-left: 200px;
+}
+
+h5 {
+  margin-left: 30px;
+}

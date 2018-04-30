@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin page</title>
+    <link rel=‘stylesheet’ href=‘https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous”’>
+  </head>
+  <body>
+    <div id='dashboard'>
+      <h4> - <i>Admin Dashboard</i> -</h4>
+      <div id='home_button'>
+        <form action='/show' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>home</button>
+        </form>
+      </div>
+      <div id='show_all_button'>
+        <form action='/show_all' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>show_all</button>
+        </form>
+      </div>
+      <div id='logout_button'>
+        <form action='/' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>logout</button>
+        </form>
+      </div>
+      <div id='delete_button'>
+        <form action='/delete_follows' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>delete follows</button>
+        </form>
+      </div>
+      <form action='/delete_inbox' method='POST'>
+        {%csrf_token%}
+        <button type='submit'>delete inbox</button>
+      </form>
+      <div id='delete_button2'>
+        <form action='/delete_posts' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>delete posts</button>
+        </form>
+      </div>
+      <div id='delete_button2'>
+        <form action='/delete_all' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>delete all</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

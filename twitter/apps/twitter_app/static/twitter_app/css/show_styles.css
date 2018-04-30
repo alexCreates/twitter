@@ -1,0 +1,124 @@
+#wrapper {
+  position: fixed;
+}
+
+img {
+  margin-left: 5px;
+  margin-top: 0px;
+  height: 120px;
+  width: 150px;
+  display: inline-block;
+}
+
+textarea {
+  width: 280px;
+  height: 120px;
+}
+
+#post_box {
+  margin-top: -480px;
+  margin-left: 306px;
+  height: 90px;
+  position: fixed;
+}
+
+#post_box button{
+  padding-top: -25px;
+  margin-left: 195px;
+  margin-top: -20px;
+}
+
+#title {
+  margin-left: 14px;
+  margin-bottom: 5px;
+  font-size: 27px;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-indent: 10px;
+  display: inline-block;
+}
+
+#welcome_user {
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-left: 23px;
+  margin-top: 0px;
+  display: inline-block;
+}
+
+#all_users {
+  font-size: 12px;
+  margin-left: 720px;
+  border-left: 1px solid grey;
+  padding-left: 20px;
+}
+
+#wall {
+  margin-left: 250px;
+  margin-top: 200px;
+  display: inline-block;
+}
+
+#wall p {
+  font-size: 30px;
+  margin-left: 90px;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-variant: small-caps;
+}
+
+#actions {
+  background-color: #cecece;
+  height: 300px;
+  width: 150px;
+}
+
+/*#post {
+  font-family: sans-serif;
+  height: 80px;
+  width: 280px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  border-style: solid;
+  border-width: 0px 0px 1px 1px;
+  border-color: lightgrey;
+  border-radius: 1px;
+}*/
+
+#post_content {
+  font-variant: small-caps;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+#posted_by a {
+  margin-left: -40px;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+#posted_by {
+  font-family: monospace;
+  font-size: 11px;
+  margin-top: 18px;
+  /*margin-left: 120px;*/
+}
+
+#inbox_button {
+  margin-left: 30px;
+}
+
+#logo a {
+  color: black;
+  font-size: 13px;
+  margin-top: -23px;
+  margin-left: 108px;
+  text-decoration: none;
+  position: absolute;
+}
+/*#divisor {
+  height: 1px;
+  width: 200px;
+  background-color: lightgrey;
+}*/

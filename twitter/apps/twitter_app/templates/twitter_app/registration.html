@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+    <link rel='stylesheet' href='{% static "twitter_app/css/register.css"%}'>
+  </head>
+  <body>
+    <div>
+      <a href='/'>home</a>
+    </div>
+    <div id='img'>
+      <img src='{% static "twitter_app/images/twitter.png"%}'>
+    </div>
+    {% if messages %}
+      {% for message in messages %}
+        <div id='errors'>
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+    <form action='/register' method='POST'>{%csrf_token%}
+      <input type='text' name='first_name' placeholder='first name'><br>
+      <input type='text' name='last_name' placeholder='last name'><br>
+      <input type='email' name='email' placeholder='email'><br>
+      <input type='password' name='password' placeholder='password'><br>
+      <input type='password' name='confirm_password' placeholder='confirm password'><br>
+      <button type='submit'><p>register</p></button>
+    </form>
+  </body>
+</html>

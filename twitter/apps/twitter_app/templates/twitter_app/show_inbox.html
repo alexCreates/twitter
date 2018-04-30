@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Inbox</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+    <link rel='stylesheet' href='{% static "twitter_app/css/show_inbox_styles.css"%}'>
+  </head>
+  <body>
+    <h4>{{user_of_inbox.first_name}}'s Inbox</h4>
+    <form action='/send_message/{{user_of_inbox.id}}/{{request.session.id}}' method='POST'>
+      {%csrf_token%}
+      <textarea name='message_content' rows='50' cols='50'>message from, {{request.session.first_name}}</textarea><br>
+      <button type='submit'>send</button>
+    </form>
+
+
+    <div id='dashboard'>
+      <h4> - <i>Admin Dashboard</i> -</h4>
+      <div id='home_button'>
+        <form action='/show' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>home</button>
+        </form>
+      </div>
+      <div id='show_all_button'>
+        <form action='/show_all' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>show_all</button>
+        </form>
+      </div>
+      <div id='logout_button'>
+        <form action='/' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>logout</button>
+        </form>
+      </div>
+      <div id='delete_button'>
+        <form action='/delete_follows' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>delete follows</button>
+        </form>
+      </div>
+      <div id='delete_button2'>
+        <form action='/delete_posts' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>delete posts</button>
+        </form>
+      </div>
+      <div id='delete_button2'>
+        <form action='/delete_all' method='POST'>
+          {%csrf_token%}
+          <button type='submit'>delete all</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
